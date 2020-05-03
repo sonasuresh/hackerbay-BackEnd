@@ -48,8 +48,7 @@ const swaggerOptions = {
 
         ]
     },
-    apis: ["./routes/*"],
-    // apis: ["app.js"]
+    apis: ["./routes/*"]
 }
 const swaggerDocs = swaggerJsDoc(swaggerOptions);
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocs))
@@ -65,5 +64,4 @@ app.use('/users', userRoute);
 app.use('/json', jsonPatchRoute);
 app.use('/image', imageRoute);
 
-// export default app;
 module.exports = app;

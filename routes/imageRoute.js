@@ -1,6 +1,5 @@
 const router = require('express').Router();
-// import express from 'express';
-// var router = express.Router();
+
 
 const imageController = require('../controller/imageController');
 const verifyTokenController = require('../controller/verifyTokenController');
@@ -27,5 +26,4 @@ const verifyTokenController = require('../controller/verifyTokenController');
  */
 router.post('/resize', verifyTokenController.verifyToken, imageController.resize);
 
-//export default router;
 module.exports = router;

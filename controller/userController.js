@@ -1,4 +1,3 @@
-//const jwt = require('jsonwebtoken');
 const jwt = require('jsonwebtoken');
 async function signin(req, res) {
   const user = {

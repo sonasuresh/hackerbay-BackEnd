@@ -10,15 +10,11 @@ async function patch(req, res) {
             res.status(400).send('Bad request');
         }
     } catch (error) {
-        console.log(error)
-        // if (e == 401) {
-        //     res.status(401).send('Unauthorized');
-        // }
         logger.error(error);
         res.status(400).send('error');
     }
 }
 
 module.exports = {
-    patch,
+    patch
 };
