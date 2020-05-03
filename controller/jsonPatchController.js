@@ -1,5 +1,6 @@
 /* eslint-disable indent */
 const jsonpatch = require('json-patch');
+const logger = require('../logger');
 
 async function patch(req, res) {
     try {
@@ -13,6 +14,7 @@ async function patch(req, res) {
         // if (e == 401) {
         //     res.status(401).send('Unauthorized');
         // }
+        logger.error(error);
         res.status(400).send('error');
     }
 }

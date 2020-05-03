@@ -2,6 +2,8 @@
 const download = require('image-downloader');
 const fs = require('fs');
 const resizeImg = require('resize-img');
+const logger = require('../logger');
+
 
 async function resize(req, res) {
     try {
@@ -18,10 +20,12 @@ async function resize(req, res) {
             res.status(200).send(img);
         }
         else {
+            logger.error('Bad request');
             res.status(400).send("Bad request..!")
         }
 
     } catch (error) {
+        logger.error(error);
         res.status(400).send(error);
     }
 }
