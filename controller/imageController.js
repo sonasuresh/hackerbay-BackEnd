@@ -17,6 +17,7 @@ async function resize(req, res) {
                 fs.readFileSync('./public/resized.png'),
                 { width: 50, height: 50 },
             );
+            logger.info(img);
             res.status(200).send(img);
         }
         else {
