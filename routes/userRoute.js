@@ -15,6 +15,6 @@ const userController = require('../controller/userController');
  */
 
 
-router.get('/signin', userController.signin);
+router.post('/signin', userController.signin);
 
 module.exports = router;
